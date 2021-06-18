@@ -24,9 +24,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::group(['middleware' => 'auth'], function() {
-	Route::get('test', function() {
-	    return "Hola";
-	});
     Route::resource('doctores', 'DoctorController');
 
     Route::resource('pacientes', 'PatientController');
